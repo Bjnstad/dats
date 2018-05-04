@@ -1,4 +1,5 @@
-<?php require_once("database.php");?>
+<?php require_once("database.php");
+?>
 
 <?php
 ini_set('display_errors', 1);
@@ -9,6 +10,7 @@ error_reporting(E_ALL);
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta charset="UTF-8">
 </head>
 <body>
  <header>
