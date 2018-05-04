@@ -8,6 +8,8 @@ $allUsers = $conn->query($sql);
 <div class="boxHolder">
     <div class="studBox">
         <h3>Total Students</h3>
+        <img id="studBoxImg1" src="./assets/avatar2.png" alt="image of student" style="max-height: 70%">
+
 
     </div>
     <div class="studBox" style="background-color:#39ce89">
@@ -16,8 +18,27 @@ $allUsers = $conn->query($sql);
 
         </a>
     </div>
+    <div class="studBox" style="background-color:#e58d49">
+  <a href="#popup">
+   <h3>Register Course</h3>
+   <img id="studBoxImg2" src="./assets/add.png" /></a>
+  </div>
 
-    <table style='border: solid 1px black;'>
+
+<div id="popup" class="overlay">
+<div class="popup">
+   <h2>Create Course</h2>
+     <a class="close" href="#">&times;</a>
+       <div class="content">
+         <form action="" method="post">
+           Course Name: <input type="text" name="course">
+           <input type="submit" name="submit">
+         </form>
+       </div>
+</div>
+</div>
+
+    <table style='border: solid 1px black; min-width:100%;'>
         <tr>
             <th>
                 Student number
