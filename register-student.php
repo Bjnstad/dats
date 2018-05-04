@@ -22,6 +22,5 @@ require_once("includes/add_user.php");
     <?php require("includes/content_register_student.php"); ?>
  </div>
 
-
 </body>
 </html>
