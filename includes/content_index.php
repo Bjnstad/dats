@@ -2,6 +2,9 @@
 $sql = "SELECT * FROM user";
 $allUsers = $conn->query($sql);
 ?>
+<style>
+<?php include '../stylesheet.css'; ?>
+</style>
 <div class="dashboard">
     <h2> Dashboard </h2>
 </div>
