@@ -23,7 +23,18 @@ $allUsers = $conn->query($sql);
    <h3>Register Course</h3>
    <img id="studBoxImg2" src="./assets/add.png" /></a>
   </div>
-
+<div id="popup" class="overlay">
+<div class="popup">
+   <h2>Create Course</h2>
+     <a class="close" href="#">&times;</a>
+       <div class="content">
+         <form action="" method="post">
+           Course Name: <input type="text" name="course">
+           <input type="submit" name="submit">
+         </form>
+       </div>
+</div>
+</div>
 
     <table style='border: solid 1px black; min-width:100%;'>
         <tr>
