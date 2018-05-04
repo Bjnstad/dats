@@ -28,6 +28,5 @@ error_reporting(E_ALL);
 </body>
 <footer>
   <?php require("includes/footer.php"); ?>
-
 </footer>
 </html>
