@@ -11,8 +11,13 @@ require_once("includes/add_user.php");
 </head>
 <body>
  <header>
-   <?php require("/includes/header.php"); ?>
-</header>
+   <div class="topBar">
+       <div class="credential">
+         <p> Flict student information database </p>
+       </div>
+   </div>
+ </header>
+
  <div class="wraper">
     <?php require("includes/content_register_student.php"); ?>
  </div>

@@ -1,10 +1,9 @@
+<?php require_once("database.php");?>
+
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
- require_once("database.php");?>
-
 
 <!DOCTYPE html>
 <html>
@@ -14,6 +13,11 @@ error_reporting(E_ALL);
 <body>
  <header>
 	<?php require("includes/header.php");?>
+   <div class="topBar">
+       <div class="credential">
+         <p> Flict student information database </p>
+       </div>
+   </div>
  </header>
 
  <div class="wraper">
