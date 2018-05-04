@@ -12,7 +12,6 @@ error_reporting(E_ALL);
 </head>
 <body>
  <header>
-	<?php require("includes/header.php");?>
    <div class="topBar">
        <div class="credential">
          <p> Flict student information database </p>
