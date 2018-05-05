@@ -13,14 +13,14 @@ error_reporting(E_ALL);
 <head>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
 </head>
 <body>
  <header>
    <div class="topBar">
        <div class="credential">
-         <p> Flict student information database </p>
+         <a href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>">
+         <p> Student information database </p>
+       </a>
        </div>
    </div>
  </header>

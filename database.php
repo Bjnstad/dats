@@ -1,8 +1,9 @@
 <?php
 
 $conn=new mysqli("10.10.2.83","dats02", "possible river winter","dats");
-$conn->set_charset("utf8");
 //$conn=new mysqli("localhost","root","root","dats4");
+
+$conn->set_charset("utf8");
 
 if (!$conn) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
