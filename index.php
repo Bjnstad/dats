@@ -1,5 +1,5 @@
 <?php require_once("database.php");
-header('Content-Type: text/html; charset=utf-8');
+
 
 ?>
 
@@ -12,7 +12,8 @@ error_reporting(E_ALL);
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 
 </head>
 <body>
