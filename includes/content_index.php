@@ -1,6 +1,8 @@
 <?php
 require_once("database.php");
-require_once("includes/add_course.php");
+require_once("add_course.php");
+require_once("delete_student.php");
+
 $sql = "SELECT user.id, user.firstname, user.lastname, user.email, course.name from user, course where user.course = course.id";
 $allUsers = $conn->query($sql);
 ?>
@@ -58,14 +60,13 @@ $allUsers = $conn->query($sql);
                 echo "<td style='width: 150px; border: 1px solid black;'>" . $row['2']. " </td>";
                 echo "<td style='width: 150px; border: 1px solid black;'>" . $row['3']. " </td>";
                 echo "<td style='width: 150px; border: 1px solid black;'>" . $row['4']. " </td>";
-                echo "
-                    <form action=\"update-student.php?studId=".$row['0'] ."\" method=\"post\">
-                        <td>
-                            <input type='submit' name='submit' value='Edit'>
-                            <input type='reset' name='submit' value='Delete'>
-                        </td>
-                    </form>";
-                echo "</tr>";
+                echo "<td>
+                  <div class=\"flex\">
+                    <a href=update-student.php?studId=".$row['0']." class=\"btn\">Edit</a>
+                    <a href=index.php?studId=".$row['0']." class=\"btnDelete\">Delete</a>
+                  </div>
+                  </td>";
+                  echo "</tr>" . "\n";
             }
         ?>
     </table>
