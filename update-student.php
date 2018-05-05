@@ -1,6 +1,6 @@
 <?php
 require_once("database.php");
-require_once("includes/add_user.php");
+require_once("includes/update_user.php");
 ?>
 
 
@@ -23,4 +23,7 @@ require_once("includes/add_user.php");
  </div>
 
 </body>
+<footer>
+  <?php require("includes/footer.php"); ?>
+</footer>
 </html>

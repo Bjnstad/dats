@@ -43,7 +43,7 @@ error_reporting(E_ALL);
          <h3 style="color:#000">To update, please change the fields you would like to update and press submit/enter.<h3>
        </div>
 
-         <form action="inc/edit-student.php" method="post">
+         <form action="" method="post">
            Student Number: <input type="text" name="studentId" value="s<?php echo $obj->id ?>"<br>
            <input type="hidden" name="oldStudId" value="<?php echo $_GET["studId"] ?>"<br>
            Firstname: <input type="text" name="firstname" value="<?php echo $obj->firstname ?>"<br>

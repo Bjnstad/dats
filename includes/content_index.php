@@ -5,6 +5,9 @@ require_once("delete_student.php");
 
 $sql = "SELECT user.id, user.firstname, user.lastname, user.email, course.name from user, course where user.course = course.id";
 $allUsers = $conn->query($sql);
+
+$countStudents= "SELECT COUNT(id) as antall from user";
+$count = $conn->query($countStudents);
 ?>
 
 <div class="dashboard">
@@ -13,9 +16,9 @@ $allUsers = $conn->query($sql);
 <div class="boxHolder">
     <div class="studBox">
         <h3>Total Students</h3>
-        <img id="studBoxImg1" src="./assets/avatar2.png" alt="image of student" style="max-height: 70%">
-
-
+        <img id="studBoxImg1" src="./assets/avatar2.png" alt="image of student" style="max-height: 60%">
+        <?php $countObj = $count->fetch_object();
+        echo "<h1>" . $countObj->antall ."</h1>" ?>
     </div>
     <div class="studBox" style="background-color:#39ce89">
       <a href="register-student.php">
