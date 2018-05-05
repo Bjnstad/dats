@@ -18,7 +18,7 @@ error_reporting(E_ALL);
  <header>
    <div class="topBar">
        <div class="credential">
-         <a href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>">
+         <a href="http://dats.vlab.cs.hioa.no:8002/">
          <p> Student information database </p>
        </a>
        </div>

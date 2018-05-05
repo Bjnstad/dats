@@ -13,7 +13,9 @@ require_once("includes/update_user.php");
  <header>
    <div class="topBar">
        <div class="credential">
-         <p> Flict student information database </p>
+         <a href="http://dats.vlab.cs.hioa.no:8002/">
+         <p> Student information database </p>
+       </a>
        </div>
    </div>
  </header>
