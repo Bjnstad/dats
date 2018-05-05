@@ -33,28 +33,36 @@ $count = $conn->query($countStudents);
    </form>
 
   </div>
-<div>
-    <table style='border: solid 1px black; width:100%;'>
-        <tr>
-            <th>
-                Student number
-            </th>
-            <th>
-                Firstname
-            </th>
-            <th>
-                Lastname
-            </th>
-            <th>
-                E-mail
-            </th>
-            <th>
-                Course
-            </th>
-            <th>
-                Edit
-            </th>
-        </tr>
+  <?php
+  if($countObj->antall > 0){
+    echo "<div>
+        <table style='border: solid 1px black; width:100%;'>
+            <tr>
+                <th>
+                    Student number
+                </th>
+                <th>
+                    Firstname
+                </th>
+                <th>
+                    Lastname
+                </th>
+                <th>
+                    E-mail
+                </th>
+                <th>
+                    Course
+                </th>
+                <th>
+                    Edit
+                </th>
+            </tr>";
+  }else{
+    echo "<h1>Please add a student</h1>";
+
+  }
+
+        ?>
         <?php
             foreach( $allUsers->fetch_all() as $row ) {
                 echo "<tr>";
