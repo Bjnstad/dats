@@ -5,6 +5,9 @@ $courses = $conn->query($sql);
 $sql = "SELECT * FROM user WHERE id =". $_GET["studId"];
 $user = $conn->query($sql);
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 
 <div class="dashboard">
