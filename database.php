@@ -1,6 +1,7 @@
 <?php
 
 $conn=new mysqli("10.10.2.83","dats02", "possible river winter","dats");
+$conn->set_charset("utf8");
 //$conn=new mysqli("localhost","root","root","dats4");
 
 if (!$conn) {
