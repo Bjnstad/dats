@@ -10,6 +10,16 @@ Created by Axel Bjørnstad, Cecilie Thoresen, Fikret Kadiric & Henry Tran
  * Count total students
  * Create course
 
+### Installation
+
+ *Step 1 
+ In order to display web pages, we are going to employ Nginx. 
+ ```
+   $ sudo apt-get update
+   $ sudo apt-get install nginx
+
+
+
 
 ### Code License
 ```
