@@ -32,6 +32,24 @@ To secure the installation, we can run a simple security script that will ask wh
    $ mysql_secure_installation
  ```
  You will be asked to enter the password you set for the MySQL root account. You can set this password to be 'possible river winter'. (This is the password used for making a connection from php to database. You can also specify your own password, but then you will need to change the password in database.php to the same as db.)
+ 
+ **Step 3: Install PHP for Processing**
+ We have now installed Nginx and MySQL. Since Nginx does not contain native PHP processing like some other web servers, we will need to install php-fpm, which stands for "fastCGI process manager". 
+ 
+ ```
+   $ sudo apt-get install php-fpm php-mysql
+ ```
+ 
+ **Step 4: Configure Nginx to Use the PHP Processor**
+ 
+ We have all of the required components installed. The only configuration we still need is to tell Nginx to use our PHP processor for dynamic content. 
+ 
+ Open the default Nginx server block config file by typing
+ 
+ ```
+   $ sudo nano /etc/nginx/sites-available/default
+ ```
+
 
 ### Code License
 ```
