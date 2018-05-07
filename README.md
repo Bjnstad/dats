@@ -98,6 +98,8 @@ systemctl restart php7.0-fpm
 systemctl restart nginx
 ```
 
+### Live demo at http://dats.vlab.cs.hioa.no:8002/
+
 
 ### Code License
 ```
