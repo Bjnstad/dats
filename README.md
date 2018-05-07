@@ -49,6 +49,54 @@ To secure the installation, we can run a simple security script that will ask wh
  ```
    $ sudo nano /etc/nginx/sites-available/default
  ```
+ 
+Find the following line:
+```
+   index index.html index.htm index.nginx-debian.html;
+```
+Replace it with (adding index.php):
+
+```
+   index index.php index.html index.htm index.nginx-debian.html;
+```
+The order of index.php, index.html, index.htm, and index.nginx-debian.html determines which one takes precedence and is loaded first by Nginx.
+
+Find the following lines:
+
+```
+# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+#
+#location ~ \.php$ {
+#       include snippets/fastcgi-php.conf;
+#
+#       # With php7.0-cgi alone:
+#       fastcgi_pass 127.0.0.1:9000;
+#       # With php7.0-fpm:
+#       fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+#}
+```
+
+Uncomment and comment them as follows or just replace the lines above with the lines below:
+
+```
+# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+#
+location ~ \.php$ {
+       include snippets/fastcgi-php.conf;
+
+       # With php7.0-cgi alone:
+       #fastcgi_pass 127.0.0.1:9000;
+       # With php7.0-fpm:
+       fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+}
+```
+
+Now restart php7.0-fpm and nginx:
+
+```
+systemctl restart php7.0-fpm
+systemctl restart nginx
+```
 
 
 ### Code License
