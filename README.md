@@ -98,6 +98,25 @@ systemctl restart php7.0-fpm
 systemctl restart nginx
 ```
 
+**Step 5: Import database to MySQL**
+To import an existing dump file into MySQL or MariaDB, you will have to create the new database. This is where the contents of the dump file will be imported.
+
+First, log in to the database as root or another user with sufficient privileges to create new databases.
+
+```
+mysql -u root -p
+```
+This will bring you into the MySQL shell prompt. Next, create a new database **dats**
+```
+mysql> CREATE DATABASE dats;
+```
+
+Now exit the MySQL shell by pressing CTRL+D. On the normal command line, you can import the dump file with the following command:
+
+```
+mysql -u username -p dats < database/data-dump.sql
+```
+
 ### Live demo at http://dats.vlab.cs.hioa.no:8002/
 
 
