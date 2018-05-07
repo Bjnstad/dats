@@ -12,14 +12,26 @@ Created by Axel Bjørnstad, Cecilie Thoresen, Fikret Kadiric & Henry Tran
 
 ### Installation on Ubuntu 16.04
 
- **Step 1** 
+ **Step 1:** 
  In order to display web pages, we are going to employ Nginx. 
  ```
    $ sudo apt-get update
    $ sudo apt-get install nginx
  ```
 
+ **Step 2:** 
+Install MySQL to Manage Site Data 
+ ```
+   $ sudo apt-get install mysql-server
+ ```
+The MySQL database software is now installed, but its configuration is not exactly complete yet.
 
+To secure the installation, we can run a simple security script that will ask whether we want to modify some insecure defaults. Begin the script by typing:
+
+ ```
+   $ mysql_secure_installation
+ ```
+ You will be asked to enter the password you set for the MySQL root account. You can set this password to be 'possible river winter'. (This is the password used for making a connection from php to database. You can also specify your own password, but then you will need to change the password in database.php to the same as db.)
 
 ### Code License
 ```
